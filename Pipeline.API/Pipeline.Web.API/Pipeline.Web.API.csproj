@@ -21,4 +21,11 @@
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pipeline.Common\Pipeline.Common.csproj" />
+    <ProjectReference Include="..\Pipeline.Data\Pipeline.Data.csproj" />
+    <ProjectReference Include="..\Pipeline.Model\Pipeline.Model.csproj" />
+    <ProjectReference Include="..\Pipeline.Services\Pipeline.Services.csproj" />
+  </ItemGroup>
+
 </Project>

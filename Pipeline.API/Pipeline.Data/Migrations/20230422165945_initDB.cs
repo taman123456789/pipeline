@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Pipeline.API.Migrations
+namespace Pipeline.Data.Migrations
 {
-    public partial class InitDB : Migration
+    public partial class initDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,7 +21,7 @@ namespace Pipeline.API.Migrations
                 columns: table => new
                 {
                     Categories_Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Categories_Name = table.Column<string>(type: "varchar(255)", unicode: false, nullable: false),
+                    Categories_Name = table.Column<string>(type: "varchar(100)", unicode: false, nullable: false),
                     Categories_Parent = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Categories_Notes = table.Column<string>(type: "varchar(1000)", unicode: false, nullable: true),
                     Categories_SortOrder = table.Column<int>(type: "int", nullable: false),

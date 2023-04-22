@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Pipeline.API.Models
+namespace Pipeline.Model.Models
 {
     public partial class Category
     {

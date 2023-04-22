@@ -19,7 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<Pipeline.API.Data.BikestoresContext>(
+builder.Services.AddDbContext<Pipeline.Data.Data.PipelineContext>(
     options =>
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("BikeStoresDB"));

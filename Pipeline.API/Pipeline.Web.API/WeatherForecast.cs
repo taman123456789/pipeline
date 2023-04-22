@@ -1,4 +1,4 @@
-namespace Pipeline.API
+namespace Pipeline.Web.API
 {
     public class WeatherForecast
     {

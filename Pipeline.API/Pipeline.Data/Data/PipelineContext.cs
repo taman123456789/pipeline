@@ -3,17 +3,17 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Pipeline.API.Models;
+using Pipeline.Model.Models;
 
-namespace Pipeline.API.Data
+namespace Pipeline.Data.Data
 {
-    public partial class BikestoresContext : DbContext
+    public partial class PipelineContext : DbContext
     {
-        public BikestoresContext()
+        public PipelineContext()
         {
         }
 
-        public BikestoresContext(DbContextOptions<BikestoresContext> options)
+        public PipelineContext(DbContextOptions<PipelineContext> options)
             : base(options)
         {
         }
@@ -35,7 +35,7 @@ namespace Pipeline.API.Data
 
                 entity.Property(e => e.CategoriesName)
                   .IsRequired()
-                  .HasColumnType("varchar(255)")
+                  .HasColumnType("varchar(100)")
                   .IsUnicode(false)
                   .HasColumnName("Categories_Name");
 

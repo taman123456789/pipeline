@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Pipeline.API.Data;
-using Pipeline.API.Models;
+using Pipeline.Data.Data;
+using Pipeline.Model.Models;
 
-namespace Pipeline.API.Controllers
+namespace Pipeline.Web.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly BikestoresContext _context;
+        private readonly PipelineContext _context;
 
-        public CategoriesController(BikestoresContext context)
+        public CategoriesController(PipelineContext context)
         {
             _context = context;
         }
