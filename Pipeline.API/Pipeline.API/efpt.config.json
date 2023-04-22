@@ -1,0 +1,45 @@
+﻿{
+  "CodeGenerationMode": 2,
+  "ContextClassName": "PipelineContext",
+  "ContextNamespace": "Data",
+  "DefaultDacpacSchema": null,
+  "FilterSchemas": false,
+  "IncludeConnectionString": false,
+  "ModelNamespace": "Models",
+  "OutputContextPath": "Data",
+  "OutputPath": "Models",
+  "ProjectRootNamespace": "Pipeline.API",
+  "Schemas": null,
+  "SelectedHandlebarsLanguage": 0,
+  "SelectedToBeGenerated": 0,
+  "Tables": [
+    {
+      "Name": "[production].[categories]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[production].[products]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[sales].[customers]",
+      "ObjectType": 0
+    }
+  ],
+  "UiHint": "DESKTOP-8C6JTTU.Pipeline",
+  "UseBoolPropertiesWithoutDefaultSql": false,
+  "UseDatabaseNames": false,
+  "UseDbContextSplitting": false,
+  "UseFluentApiOnly": true,
+  "UseHandleBars": false,
+  "UseInflector": true,
+  "UseLegacyPluralizer": false,
+  "UseNoConstructor": false,
+  "UseNoDefaultConstructor": false,
+  "UseNoNavigations": false,
+  "UseNoObjectFilter": false,
+  "UseNodaTime": false,
+  "UseNullableReferences": false,
+  "UseSchemaFolders": false,
+  "UseSpatial": false
+}
