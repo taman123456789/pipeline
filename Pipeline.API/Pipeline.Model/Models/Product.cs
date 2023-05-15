@@ -4,12 +4,8 @@ using System.Collections.Generic;
 
 namespace Pipeline.Model.Models
 {
-    public partial class Product
+    public partial class Product : Auditable
     {
-        public Product()
-        {
-        }
-
         public Guid ProductId { get; set; }
         public string ProductCode { get; set; }
         public string ProductName { get; set; }

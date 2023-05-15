@@ -4,12 +4,8 @@ using System.Collections.Generic;
 
 namespace Pipeline.Model.Models
 {
-    public partial class Customer
+    public partial class Customer : Auditable
     {
-        public Customer()
-        {
-        }
-
         public Guid CustomerId { get; set; }
         public string CustomerCode { get; set; }
         public string FirstName { get; set; }
@@ -20,8 +16,6 @@ namespace Pipeline.Model.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-        public DateTime TimeFirst { get; set; }
-        public DateTime TimeLast { get; set; }
 
     }
 }

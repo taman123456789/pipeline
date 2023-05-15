@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pipeline.Data.Data;
@@ -12,6 +9,7 @@ namespace Pipeline.Web.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CustomersController : ControllerBase
     {
         private readonly PipelineContext _context;
@@ -23,8 +21,11 @@ namespace Pipeline.Web.API.Controllers
 
         // GET: api/Customers
         [HttpGet]
+       
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
+            _context.Categories.FromSqlRaw($"SELECT * FROM [Production].[Categories]");
+            //var db = _context.Categoriesid.FromSqlRaw($"EXECUTE dbo.huytest");
             return await _context.Customers.ToListAsync();
         }
 
@@ -74,7 +75,6 @@ namespace Pipeline.Web.API.Controllers
         }
 
         // POST: api/Customers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
         {
@@ -94,7 +94,8 @@ namespace Pipeline.Web.API.Controllers
                 return NotFound();
             }
 
-            _context.Customers.Remove(customer);
+           // _context.Customers.Remove(customer);
+            _context.Database.ExecuteSqlRaw($"SELECT * FROM [Production].[Categories]");
             await _context.SaveChangesAsync();
 
             return NoContent();

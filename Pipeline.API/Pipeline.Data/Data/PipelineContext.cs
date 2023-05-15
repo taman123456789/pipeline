@@ -22,11 +22,9 @@ namespace Pipeline.Data.Data
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Product> Products { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-            modelBuilder.Entity<Category>(entity =>
+           modelBuilder.Entity<Category>(entity =>
             {
                 entity.HasKey(c => c.CategoryId);
                 entity.ToTable("Categories", "Production");

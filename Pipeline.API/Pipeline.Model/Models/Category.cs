@@ -4,19 +4,14 @@ using System.Collections.Generic;
 
 namespace Pipeline.Model.Models
 {
-    public partial class Category
+    public class Category :Auditable
     {
-        public Category()
-        {
-        }
-
         public Guid CategoryId { get; set; }
         public string CategoriesName { get; set; }
         public Guid CategoriesParent { get; set; }
         public string CategoriesNotes { get; set; }
         public int CategoriesSortOrder { get; set; }
         public string CategoriesDescription { get; set; }
-        public DateTime TimeFirst { get; set; }
-        public DateTime TimeLast { get; set; }
+       
     }
 }
